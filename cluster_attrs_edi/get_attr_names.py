@@ -1,16 +1,12 @@
 
 # coding: utf-8
 
-# In[18]:
 
 import csv
 import operator
 import os
 
 
-# In[19]:
-
-# Limnology/csv-files
 def get_attr_names_lc(_infolder):
     attributes_list_lc = []
     count_list_lc = []
@@ -30,9 +26,6 @@ def get_attr_names_lc(_infolder):
     return dict_lc
 
 
-# In[20]:
-
-#lowerCaseFrequencyOrder.csv
 def get_attr_names_frequency_order(_infolder,_outfile):
     # Obtain the dictionary of attribute names in lower case
     dict_lc = get_attr_names_lc(_infolder)
@@ -46,9 +39,6 @@ def get_attr_names_frequency_order(_infolder,_outfile):
         w.writerows(sorted_dict_lc)
 
 
-# In[21]:
-
-#lowerCaseAlphabeticOrder.csv
 def get_attr_names_alphabetic_order(_infolder,_outfile):
     # Obtain the dictionary of attribute names in lower case
     dict_lc = get_attr_names_lc(_infolder)
@@ -66,10 +56,4 @@ def get_attr_names_alphabetic_order(_infolder,_outfile):
         w.writerows(dict_sorted_alphabeticOrder.items())
 
 
-# In[23]:
-
-# Examples
-
-get_attr_names_frequency_order('Limnology/csv-files','lowerCaseFrequencyOrder.csv')
-get_attr_names_alphabetic_order('Limnology/csv-files','lowerCaseAlphabeticOrder.csv')
 
