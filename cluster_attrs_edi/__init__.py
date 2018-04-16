@@ -5,18 +5,15 @@ if sys.version_info > (3, 0):
     import importlib
     importlib.reload(sys)
 
-    from .profile_encoding import *
+    from .cluster_attrs_edi import *
 
-    from .profile_numericalanalysis import *
-    from .profile_stringanalysis import *
-    from .profile_valuelengthanalysis import *
-
+    from .get_attr_names import *
+    from .cluster_attr_names import *
 else:
     reload(sys)
     sys.setdefaultencoding("UTF-8")
 
-    from profile_encoding import *
+    from cluster_attrs_edi import *
 
-    from profile_numericalanalysis import *
-    from profile_stringanalysis import *
-    from profile_valuelengthanalysis import *
+    from get_attr_names import *
+    from cluster_attr_names import *
