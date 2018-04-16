@@ -36,9 +36,9 @@ with open('README.md') as f:
     LONG_DESCRIPTION = f.read()
 
 setuptools.setup(
-    name='profile_values',
+    name='cluster_attrs_edi',
     version='0.2.1',
-    description='Python library for data profiling.',
+    description='Python library for clustering attribute names.',
     long_description=LONG_DESCRIPTION,
     url='',
     author='Meera George',
