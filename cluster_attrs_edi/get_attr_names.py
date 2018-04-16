@@ -8,6 +8,7 @@ import os
 
 
 def get_attr_names_lc(_infolder):
+    dict_lc={}
     attributes_list_lc = []
     count_list_lc = []
     for file in os.listdir(_infolder):
