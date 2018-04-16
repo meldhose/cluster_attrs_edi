@@ -1,14 +1,9 @@
 
 # coding: utf-8
 
-# In[2]:
-
 import csv
 import os
 import py_valuenormalization as vn
-
-
-# In[3]:
 
 # Function to remove any prefix string from the text
 def remove_comment(text, prefix):
@@ -16,10 +11,6 @@ def remove_comment(text, prefix):
         return text[len(prefix):]
     return text
 
-
-# In[4]:
-
-# Limnology/csv-files
 def get_attr_names(_infolder):
     dict_lc={}
     attributes_list_lc = []
@@ -44,11 +35,6 @@ def get_attr_names(_infolder):
     vals = attributes_list_lc
     return vals
 
-
-# In[19]:
-
-# Limnology/Stage 3/clusteredAttributes.csv
-# clusterAttributes_v4.csv
 def cluster_attr_names(_infolder,_outfile):
     vals = get_attr_names(_infolder)
     hac = vn.HierarchicalClustering(vals)
@@ -70,10 +56,6 @@ def cluster_attr_names(_infolder,_outfile):
     return clusts
 
 
-# In[21]:
-
-# Limnology/Stage 3/clusteredAttributes.csv
-# clusterAttributes_v4.csv
 def print_cluster_attr_names(_infolder):
     vals = get_attr_names(_infolder)
     hac = vn.HierarchicalClustering(vals)
@@ -88,19 +70,6 @@ def print_cluster_attr_names(_infolder):
             print(k+"  "+str(len(clusts[k])))
             print("\t%s"%("\n\t".join(clusts[k])))
 
-
-# In[20]:
-
-abc = cluster_attr_names('Limnology/csv-files','clusterAttributes_v4.csv')
-abc
-
-
-# In[22]:
-
-print_cluster_attr_names('Limnology/csv-files')
-
-
-# In[ ]:
 
 
 
