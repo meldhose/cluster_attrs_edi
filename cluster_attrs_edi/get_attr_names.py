@@ -29,6 +29,7 @@ def get_attr_names_lc(_infolder):
 
 def get_attr_names_frequency_order(_infolder,_outfile):
     # Obtain the dictionary of attribute names in lower case
+    dict_lc={}
     dict_lc = get_attr_names_lc(_infolder)
     
     # Sort them in the alphabetic order of the key values
@@ -42,6 +43,7 @@ def get_attr_names_frequency_order(_infolder,_outfile):
 
 def get_attr_names_alphabetic_order(_infolder,_outfile):
     # Obtain the dictionary of attribute names in lower case
+    dict_lc={}
     dict_lc = get_attr_names_lc(_infolder)
     
     # Initialize the dictionary sorted alphabetically in lower case
